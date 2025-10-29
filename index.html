@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dulcería El Dulce Sabor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header>
+    <h1>Dulcería El Dulce Sabor</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="produ.html">Productos</a>
+      <a href="vent.html">Ventas</a>
+      <a href="admin.html">Administrador</a>
+      <a href="login.html">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>¡Bienvenido a la dulcería más deliciosa!</h2>
+
+    <section class="carousel-container" aria-label="Carrusel de imágenes de dulces">
+      <button class="carousel-btn" id="prev" aria-label="Imagen anterior">&#10094;</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img src="https://i.pinimg.com/736x/4a/70/74/4a7074e01ac804231a3956c5933cd106.jpg" alt="Dulce 1" />
+          </li>
+          <li class="carousel-slide">
+            <img src="https://i.pinimg.com/1200x/c5/67/f5/c567f57a3be103ee40bc1985bdf15fe3.jpg" alt="Dulce 2" />
+          </li>
+          <li class="carousel-slide">
+            <img src="https://i.pinimg.com/1200x/9a/ca/ab/9acaab3525465d0bf57deb18e9de1bfc.jpg" alt="Dulce 3" />
+          </li>
+        </ul>
+      </div>
+      <button class="carousel-btn" id="next" aria-label="Imagen siguiente">&#10095;</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dulcería El Dulce Sabor. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('#next');
+    const prevButton = document.querySelector('#prev');
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Ubicar los slides uno al lado del otro
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    };
+
+    // Evento botón siguiente
+    nextButton.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide');
+      const nextSlide = currentSlide.nextElementSibling || slides[0];
+      moveToSlide(track, currentSlide, nextSlide);
+    });
+
+    // Evento botón anterior
+    prevButton.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide');
+      const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1];
+      moveToSlide(track, currentSlide, prevSlide);
+    });
+  </script>
+</body>
+</html>
+<div class="
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></div>

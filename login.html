@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Iniciar Sesión</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="produ.html">Productos</a>
+      <a href="vent.html">Ventas</a>
+      <a href="admin.html">Administrador</a>
+      <a href="login.html">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carrusel">
+      <img id="carruselImg" src="https://i.pinimg.com/736x/4a/70/74/4a7074e01ac804231a3956c5933cd106.jpg" alt="Carrusel de dulces">
+    </div>
+
+    <form action="admin.html" method="post">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="clave">Contraseña:</label>
+      <input type="password" id="clave" name="clave" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
+
+  <script>
+    const imagenes = ["img/dulce1.jpg", "img/dulce2.jpg", "img/dulce3.jpg"];
+    let indice = 0;
+
+    setInterval(() => {
+      indice = (indice + 1) % imagenes.length;
+      document.getElementById("carruselImg").src = imagenes[indice];
+    }, 2000);
+  </script>
+</body>
+</html>
